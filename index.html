@@ -36,72 +36,82 @@
             pointer-events: none;
         }
     </style>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
-    <div class="banner">
-        <div class="slider" style="--quantity: 10">
-            <div class="item" style="--position: 1"><img src="images/dragon_1.jpg" alt=""></div>
-            <div class="item" style="--position: 2"><img src="images/dragon_2.jpg" alt=""></div>
-            <div class="item" style="--position: 3"><img src="images/dragon_3.jpg" alt=""></div>
-            <div class="item" style="--position: 4"><img src="images/dragon_4.jpg" alt=""></div>
-            <div class="item" style="--position: 5"><img src="images/dragon_5.jpg" alt=""></div>
-            <div class="item" style="--position: 6"><img src="images/dragon_6.jpg" alt=""></div>
-            <div class="item" style="--position: 7"><img src="images/dragon_7.jpg" alt=""></div>
-            <div class="item" style="--position: 8"><img src="images/dragon_8.jpg" alt=""></div>
-            <div class="item" style="--position: 9"><img src="images/dragon_9.jpg" alt=""></div>
-            <div class="item" style="--position: 10"><img src="images/dragon_10.jpg" alt=""></div>
-        </div>
-        <div class="content">
-            <h1 data-content="Landing Page">
-                Landing Page
-            </h1>
-            <div class="author">
-                <h2>Gonçalo Nogueira</h2>
-                <p><b>Software Developer</b></p>
-                <p>
-                    Welcome to my portfolio!
-                </p>
+    <div class="slideshow-container">
+        <div class="slide" id="slide1">
+            <div class="banner">
+                <section id="home">
+                    <div class="slider" style="--quantity: 10">
+                        <div class="item" style="--position: 1"><img src="images/dragon_1.jpg" alt=""></div>
+                        <div class="item" style="--position: 2"><img src="images/dragon_2.jpg" alt=""></div>
+                        <div class="item" style="--position: 3"><img src="images/dragon_3.jpg" alt=""></div>
+                        <div class="item" style="--position: 4"><img src="images/dragon_4.jpg" alt=""></div>
+                        <div class="item" style="--position: 5"><img src="images/dragon_5.jpg" alt=""></div>
+                        <div class="item" style="--position: 6"><img src="images/dragon_6.jpg" alt=""></div>
+                        <div class="item" style="--position: 7"><img src="images/dragon_7.jpg" alt=""></div>
+                        <div class="item" style="--position: 8"><img src="images/dragon_8.jpg" alt=""></div>
+                        <div class="item" style="--position: 9"><img src="images/dragon_9.jpg" alt=""></div>
+                        <div class="item" style="--position: 10"><img src="images/dragon_10.jpg" alt=""></div>
+                    </div>
+                    <div class="content">
+                        <h1 data-content="Landing Page">
+                            Landing Page
+                        </h1>
+                        <div class="author">
+                            <h2>Gonçalo Nogueira</h2>
+                            <p><b>Software Developer</b></p>
+                            <p>
+                                Welcome to my portfolio!
+                            </p>
+                        </div>
+                        <div class="model"></div>
+                </section>
             </div>
-            <div class="model"></div>
         </div>
     </div>
-
     <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="hamburger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
+    <div class="slide" id="slide2">
+        <nav class="main-nav">
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
     <!-- About section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate Software Engineer, recently graduated Bachelor's Degree in Informatics Engineering.</p>
-    </section>
+    <div class="slide" id="slide3">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate Software Engineer, recently graduated Bachelor's Degree in Informatics Engineering.
+            </p>
+        </section>
+    </div>
 
     <!-- Projects section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Project 1</h3>
-                <img src="images/project1.jpg" alt="Project 1">
-                <p>Description of Project 1</p>
-                <a href="#" class="btn">View Project</a>
+    <div class="slide" id="slide4">
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <p>Description of Project 1</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Skills section -->
     <section id="skills">
@@ -119,7 +129,7 @@
             <li>CI/CD</li>
         </ul>
     </section>
-
+    </div>
     <!-- Contact Popup -->
     <div id="contact-popup" class="contact-popup">
         <div class="contact-content">

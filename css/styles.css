@@ -1,14 +1,15 @@
 @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
-.banner{
+.banner {
     width: 100%;
     height: 100vh;
     text-align: center;
     overflow: hidden;
     position: relative;
 }
-.banner .slider{
+
+.banner .slider {
     position: absolute;
     width: 200px;
     height: 250px;
@@ -19,27 +20,31 @@
     animation: autoRun 20s linear infinite;
     z-index: 2;
 }
-@keyframes autoRun{
-    from{
+
+@keyframes autoRun {
+    from {
         transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
-    }to{
+    }
+
+    to {
         transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
     }
 }
 
-.banner .slider .item{
+.banner .slider .item {
     position: absolute;
     inset: 0 0 0 0;
-    transform: 
-        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(550px);
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
 }
-.banner .slider .item img{
+
+.banner .slider .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.banner .content{
+
+.banner .content {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -53,14 +58,16 @@
     align-items: center;
     z-index: 1;
 }
-.banner .content h1{
+
+.banner .content h1 {
     font-family: 'ICA Rubrik';
     font-size: 16em;
     line-height: 1em;
     color: #25283B;
     position: relative;
 }
-.banner .content h1::after{
+
+.banner .content h1::after {
     position: absolute;
     inset: 0 0 0 0;
     content: attr(data-content);
@@ -69,15 +76,18 @@
     -webkit-text-stroke: 2px #d2d2d2;
     color: transparent;
 }
-.banner .content .author{
+
+.banner .content .author {
     font-family: Poppins;
     text-align: right;
     max-width: 200px;
 }
-.banner .content h2{
+
+.banner .content h2 {
     font-size: 3em;
 }
-.banner .content .model{
+
+.banner .content .model {
     background-image: url(../images/model.png);
     width: 100%;
     height: 75vh;
@@ -89,24 +99,27 @@
     background-position: top center;
     z-index: 1;
 }
+
 @media screen and (max-width: 1023px) {
-    .banner .slider{
+    .banner .slider {
         width: 160px;
         height: 200px;
         left: calc(50% - 80px);
     }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(300px);
+
+    .banner .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
     }
-    .banner .content h1{
+
+    .banner .content h1 {
         text-align: center;
         width: 100%;
         text-shadow: 0 10px 20px #000;
         font-size: 7em;
     }
-    .banner .content .author{
+
+    .banner .content .author {
         color: #fff;
         padding: 20px;
         text-shadow: 0 10px 20px #000;
@@ -117,18 +130,20 @@
         padding: 0 30px;
     }
 }
+
 @media screen and (max-width: 767px) {
-    .banner .slider{
+    .banner .slider {
         width: 100px;
         height: 150px;
         left: calc(50% - 50px);
     }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(180px);
+
+    .banner .slider .item {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
     }
-    .banner .content h1{
+
+    .banner .content h1 {
         font-size: 5em;
     }
 }
@@ -137,7 +152,8 @@
 .main-nav {
     position: fixed;
     top: 0;
-    right: -300px; /* Hide the menu off-screen */
+    right: -300px;
+    /* Hide the menu off-screen */
     width: 300px;
     height: 100vh;
     background-color: rgba(37, 40, 59, 0.95);
@@ -146,7 +162,8 @@
 }
 
 .main-nav.active {
-    right: 0; /* Show the menu */
+    right: 0;
+    /* Show the menu */
 }
 
 .hamburger-menu {
@@ -155,7 +172,8 @@
     right: 20px;
     cursor: pointer;
     z-index: 1001;
-    background-color: rgba(37, 40, 59, 0.8); /* Semi-transparent background */
+    background-color: rgba(37, 40, 59, 0.8);
+    /* Semi-transparent background */
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -164,13 +182,15 @@
 .bar {
     width: 30px;
     height: 3px;
-    background-color: #D2D2D2; /* Light color for contrast */
+    background-color: #D2D2D2;
+    /* Light color for contrast */
     margin: 6px 0;
     transition: 0.4s;
 }
 
 .hamburger-menu:hover .bar {
-    background-color: #fff; /* White on hover for better visibility */
+    background-color: #fff;
+    /* White on hover for better visibility */
 }
 
 .nav-links {
@@ -290,6 +310,7 @@ form {
     gap: 15px;
     flex-wrap: wrap;
 }
+
 form input,
 form textarea,
 form button {
@@ -301,20 +322,25 @@ form button {
     border: 1px solid #71717188;
     transition: background-image 0.5s, opacity .5s, border .5s;
 }
+
 form * {
-    width: 100%!important;
+    width: 100% !important;
 }
+
 form input,
 form textarea {
     color: #fff;
 }
+
 form textarea {
     min-height: 100px;
     resize: vertical;
 }
+
 form button {
     cursor: pointer;
 }
+
 form button[type="submit"] {
     background-color: #fff;
     color: #1C1C1E;
@@ -323,6 +349,7 @@ form button[type="submit"] {
 .or {
     position: relative;
 }
+
 .or::before {
     position: absolute;
     width: 100%;
@@ -330,32 +357,37 @@ form button[type="submit"] {
     content: '';
     left: 0;
     top: 45%;
-    background-image: linear-gradient(
-        to right, 
-        #71717155 0 40%, transparent 40% 60%, #71717155 60%
-    );
+    background-image: linear-gradient(to right,
+            #71717155 0 40%, transparent 40% 60%, #71717155 60%);
 }
+
 p a {
     border-bottom: 1px solid #717171;
 }
-input + p {
+
+input+p {
     font-size: small;
     text-align: left;
 }
+
 .sso {
     margin-bottom: 30px;
 }
-.sso + p {
+
+.sso+p {
     font-size: small;
 }
+
 input:invalid:not(:placeholder-shown) {
     border-color: red;
     background-image: url(../images/checked_red.png);
 }
+
 input:valid:not(:placeholder-shown) {
     background-image: url(../images/checked_green.png);
 }
-input:invalid:not(:placeholder-shown), 
+
+input:invalid:not(:placeholder-shown),
 input:valid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown),
 textarea:valid:not(:placeholder-shown) {
@@ -363,12 +395,14 @@ textarea:valid:not(:placeholder-shown) {
     background-repeat: no-repeat;
     background-position: calc(100% - 10px);
 }
-input:invalid:not(:placeholder-shown) + p,
-textarea:invalid:not(:placeholder-shown) + p {
+
+input:invalid:not(:placeholder-shown)+p,
+textarea:invalid:not(:placeholder-shown)+p {
     color: #a20e0e;
 }
-input:invalid ~ button[type="submit"],
-textarea:invalid ~ button[type="submit"] {
+
+input:invalid~button[type="submit"],
+textarea:invalid~button[type="submit"] {
     opacity: .6;
     pointer-events: none;
 }
@@ -475,4 +509,42 @@ footer {
     font-size: 1.5em;
     cursor: pointer;
     color: #25283B;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+#slide1 {
+    background-color: #f0f0f0;
+}
+
+#slide2 {
+    background-color: #e0e0e0;
+}
+
+#slide3 {
+    background-color: #d0d0d0;
+}
+
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .slide h1 {
+        font-size: 8vw;
+    }
+
+    .slide p {
+        font-size: 4vw;
+    }
 }
