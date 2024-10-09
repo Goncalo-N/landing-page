@@ -83,3 +83,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the first slide
     showSlide(currentSlide);
 });
+
+const toggleButton = document.getElementById('dark-mode-toggle');
+
+// Check if dark mode is already enabled
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+// Toggle dark mode on click
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    // Save the preference to localStorage
+    let theme = 'light';
+    if (document.body.classList.contains('dark-mode')) {
+        theme = 'dark';
+    }
+    localStorage.setItem('theme', theme);
+});
