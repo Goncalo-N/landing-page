@@ -50,10 +50,7 @@ A clean, responsive, and interactive portfolio landing page built using HTML, CS
 - [ ] Add light/dark mode toggle.
 - [x] Implement a form for direct contact.
 - [ ] Improve animations and transitions.
-- [ ] Make the page more responsive, adapting to different screen sizes.
+- [x] Make the page more responsive, adapting to different screen sizes.
 
 ## 🧑‍💻 **Contributing**
 Feel free to fork the repository and submit pull requests. Any contributions to improve the page are welcome!
-
-## 📝 **License**
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
