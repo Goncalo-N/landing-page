@@ -350,10 +350,10 @@ input + p {
 }
 input:invalid:not(:placeholder-shown) {
     border-color: red;
-    background-image: url(images/checked_red.png);
+    background-image: url(../images/checked_red.png);
 }
 input:valid:not(:placeholder-shown) {
-    background-image: url(images/checked_green.png);
+    background-image: url(../images/checked_green.png);
 }
 input:invalid:not(:placeholder-shown), 
 input:valid:not(:placeholder-shown),
