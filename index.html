@@ -36,7 +36,7 @@
             pointer-events: none;
         }
     </style>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -69,7 +69,7 @@
         </div>
     </div>
 
-    <!-- Replace the existing nav with this -->
+    <!-- Navigation -->
     <nav class="main-nav">
         <div class="hamburger-menu">
             <div class="bar"></div>
@@ -100,7 +100,6 @@
                 <p>Description of Project 1</p>
                 <a href="#" class="btn">View Project</a>
             </div>
-            <!-- Add more project cards as needed -->
         </div>
     </section>
 
@@ -118,11 +117,10 @@
             <li>PHP</li>
             <li>Git</li>
             <li>CI/CD</li>
-            <!-- Add more skills -->
         </ul>
     </section>
 
-    <!-- Remove the existing contact section and add this pop-up structure -->
+    <!-- Contact Popup -->
     <div id="contact-popup" class="contact-popup">
         <div class="contact-content">
             <h2>Contact Me</h2>
@@ -139,45 +137,7 @@
     <footer>
         <p>&copy; 2024 Gonçalo Nogueira. All rights reserved.</p>
     </footer>
-
-    <script>
-        const hamburger = document.querySelector('.hamburger-menu');
-        const nav = document.querySelector('.main-nav');
-        const contactPopup = document.getElementById('contact-popup');
-        const closePopup = document.getElementById('close-popup');
-        const contactLink = document.querySelector('.nav-links a[href="#contact"]');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            nav.classList.toggle('active');
-        });
-
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                hamburger.classList.remove('active');
-                nav.classList.remove('active');
-
-                // Open contact pop-up if contact link is clicked
-                if (link.getAttribute('href') === '#contact') {
-                    e.preventDefault();
-                    contactPopup.style.display = 'flex';
-                }
-            });
-        });
-
-        // Close pop-up when close button is clicked
-        closePopup.addEventListener('click', () => {
-            contactPopup.style.display = 'none';
-        });
-
-        // Close pop-up when clicking outside the form
-        contactPopup.addEventListener('click', (e) => {
-            if (e.target === contactPopup) {
-                contactPopup.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
