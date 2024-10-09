@@ -6,7 +6,6 @@ A clean, responsive, and interactive portfolio landing page built using HTML, CS
 
 ## 🚀 **Features**
 - **No-scroll navigation**: Button-driven interaction for a clean and intuitive user experience.
-- **Responsive design**: Optimized for all devices, including desktops, tablets, and mobile.
 - **Modern UI**: Built with a aesthetic, leveraging the power of CSS and HTML.
 - **Interactive elements**: Dynamic features and animations handled with CSS and JavaScript.
 - **Contact form**: A contact form that allows users to send me a message.
@@ -49,8 +48,9 @@ A clean, responsive, and interactive portfolio landing page built using HTML, CS
 
 ## 💡 **Future Improvements**
 - [ ] Add light/dark mode toggle.
-- [ ] Implement a form for direct contact.
-- [ ] Add a blog section.
+- [x] Implement a form for direct contact.
+- [ ] Improve animations and transitions.
+- [ ] Make the page more responsive, adapting to different screen sizes.
 
 ## 🧑‍💻 **Contributing**
 Feel free to fork the repository and submit pull requests. Any contributions to improve the page are welcome!
